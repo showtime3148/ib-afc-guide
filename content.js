@@ -21,9 +21,9 @@ window.STAGES = [
     items: [
       { id: "pr-info", text: "학교 정보·주소·학년도 입력", tip: "영문 주소는 학교 공문의 영문 표기와 똑같이 맞추세요. 설립 연도는 하나로 통일합니다." },
       { id: "pr-section", text: "학년별 학생 수(School section) 입력", tip: "학년별로 따로 입력합니다. DP 대상 학년은 'Projected(예상)'로 표시합니다." },
-      { id: "pr-staff", text: "Head of School, Coordinator, Billing Contact 등록과 Confirmed 상태 확인", tip: "세 역할 모두 Confirmed여야 청구서가 발행됩니다. 이름은 Last name(성)과 First name(이름)을 정확히 나눠 입력하세요. 예: Last name HONG / First name Gil-dong" },
-      { id: "pr-overall", text: "School staff 화면의 'Head of School (Overall)' 선택 후 Save", tip: "빨간 별표 필수 칸인데 놓치기 쉽습니다. 이걸 안 하면 마지막 제출 때 'Profile Review Section 미완료' 오류가 납니다." },
-      { id: "pr-review", text: "Profile Review 화면에서 내용 확인 후 저장", tip: "내용을 다 채웠어도 페이지 맨 아래 'Save and Continue'를 눌러야 완료로 인정됩니다. 그전까지 왼쪽 메뉴의 Profile Review는 체크 없이 파란 글씨로 남습니다." }
+      { id: "pr-staff", shot: "screens/08-school-staff.jpg", shotCap: "School Profile → School staff: 관리 역할(교장·코디네이터·결제 담당)이 Confirmed 목록에 있어야 합니다. 일반 교사는 각자 My IB에서 등록합니다.", text: "Head of School, Coordinator, Billing Contact 등록과 Confirmed 상태 확인", tip: "세 역할 모두 Confirmed여야 청구서가 발행됩니다. 이름은 Last name(성)과 First name(이름)을 정확히 나눠 입력하세요. 예: Last name HONG / First name Gil-dong" },
+      { id: "pr-overall", shot: "screens/09-head-overall.jpg", shotCap: "같은 화면 아래쪽 Head of School (Overall)에서 교장을 고르고 Save.", text: "School staff 화면의 'Head of School (Overall)' 선택 후 Save", tip: "빨간 별표 필수 칸인데 놓치기 쉽습니다. 이걸 안 하면 마지막 제출 때 'Profile Review Section 미완료' 오류가 납니다." },
+      { id: "pr-review", shot: "screens/03-profile-save.jpg", shotCap: "신청서 Profile Review 맨 아래 Save and Continue를 눌러야 완료됩니다.", text: "Profile Review 화면에서 내용 확인 후 저장", tip: "내용을 다 채웠어도 페이지 맨 아래 'Save and Continue'를 눌러야 완료로 인정됩니다. 그전까지 왼쪽 메뉴의 Profile Review는 체크 없이 파란 글씨로 남습니다." }
     ]
   },
   {
@@ -41,13 +41,13 @@ window.STAGES = [
     title: "3. AFC 섹션 작성",
     when: "2~4주",
     items: [
-      { id: "afc-school", text: "School and Community Description", tip: "학교 역사, 지역, 학생 구성, DP가 학교에 줄 기여. 타당성 조사서 1·6번을 다듬어 쓰면 됩니다." },
+      { id: "afc-school", shot: "screens/02-left-menu.jpg", shotCap: "신청서 왼쪽 메뉴. 초록색 체크 = 완료, 노란색 = 미완료.", text: "School and Community Description", tip: "학교 역사, 지역, 학생 구성, DP가 학교에 줄 기여. 타당성 조사서 1·6번을 다듬어 쓰면 됩니다." },
       { id: "afc-prog", text: "Programme Information", tip: "법인명, 성별 구성, 기숙사, 학급 규모, IB 학생 추가 수업료 여부. 교육청 지원 공문 내용과 맞추세요." },
       { id: "afc-subj", text: "Subject proposal (개설 과목)", tip: "한국어로 운영 가능한 과목인지 먼저 확인하세요. 예: 그룹 3(개인과 사회)은 한국어 공식 가이드가 역사뿐입니다." },
       { id: "afc-a", text: "Standard A: Philosophy", tip: "사명 선언문, 철학 일치 정도, 이해관계자 표, 전원 참여 여부. '부분적으로 일치(Partially)'라고 솔직하게 답하고 개선 과정을 쓰는 편이 자연스럽습니다." },
       { id: "afc-b1", text: "Standard B1: Leadership and structure", tip: "관리기구(법인 이사회) 설명, 리더십 팀, 채용 책임, 코디네이터 업무 비율, 언어 정책." },
-      { id: "afc-b2", text: "Standard B2: Resources and support", tip: "교사 수는 School Staff에 등록된 인원으로 자동 계산됩니다. 3번을 펼치면 나오는 3a 안의 필수 입력 칸 '인증 후 새로 채용한 교원의 적응·연수 계획'을 꼭 작성하고 Save and Continue를 누르세요." },
-      { id: "afc-budget", text: "Implementation Budget (5개년 예산, SGD)", tip: "후보 신청비, 컨설테이션비, 워크숍비, 인증 신청비, 연회비를 연도별로 넣습니다. B2.3a의 연수 계획과 금액이 맞아야 합니다." }
+      { id: "afc-b2", shot: "screens/04-b2-3a.jpg", shotCap: "3번 → 3a를 펼치면 빨간 필수 칸이 나옵니다.", text: "Standard B2: Resources and support", tip: "교사 수는 School Staff에 등록된 인원으로 자동 계산됩니다. 3번을 펼치면 나오는 3a 안의 필수 입력 칸 '인증 후 새로 채용한 교원의 적응·연수 계획'을 꼭 작성하고 Save and Continue를 누르세요." },
+      { id: "afc-budget", shot: "screens/05-budget.jpg", shotCap: "시작 연도 Save → Add to Budget으로 항목 추가 → Save and Continue.", text: "Implementation Budget (5개년 예산, SGD)", tip: "후보 신청비, 컨설테이션비, 워크숍비, 인증 신청비, 연회비를 연도별로 넣습니다. B2.3a의 연수 계획과 금액이 맞아야 합니다." }
     ]
   },
   {
@@ -55,7 +55,7 @@ window.STAGES = [
     title: "4. 필수 서류 업로드 (Documents)",
     when: "번역 공증 기간 포함 1~2주",
     items: [
-      { id: "doc-legal", text: "1. 법적 지위 서류 + 공증 영문 번역본", tip: "가장 오래 걸립니다. 설립 인가서·법인 등기부 등을 번역 공증 받아 한 PDF로 묶으세요. 미리 맡기세요." },
+      { id: "doc-legal", shot: "screens/06-documents.jpg", shotCap: "항목별 Upload로 올리면 위 표에 쌓입니다.", text: "1. 법적 지위 서류 + 공증 영문 번역본", tip: "가장 오래 걸립니다. 설립 인가서·법인 등기부 등을 번역 공증 받아 한 PDF로 묶으세요. 미리 맡기세요." },
       { id: "doc-auth", text: "2. 당국 지원 확인서 (교육청 공문)", tip: "교육청이 DP 운영을 재정 지원한다는 내용이 들어간 공문과 영문 번역본." },
       { id: "doc-org", text: "3. 영문 조직도 (DP 코디네이터와 보고 체계 포함)", tip: "교장 → 교감(코디네이터) → 부장·교과 교사의 보고선이 보여야 합니다. 개인정보(생년월일 등)는 넣지 마세요." },
       { id: "doc-pay", text: "4. 후보 신청비 결제 증빙", tip: "카드 영수증이나 송금 확인서." },
@@ -68,10 +68,10 @@ window.STAGES = [
     title: "5. 검토와 제출",
     when: "마지막 날",
     items: [
-      { id: "sub-left", text: "왼쪽 메뉴가 모두 초록색인지 확인", tip: "노란색은 미완료입니다. Profile Review(파란 글씨)도 체크 표시가 있어야 합니다." },
+      { id: "sub-left", shot: "screens/02-left-menu.jpg", shotCap: "제출 전 모든 메뉴가 초록색인지 확인합니다.", text: "왼쪽 메뉴가 모두 초록색인지 확인", tip: "노란색은 미완료입니다. Profile Review(파란 글씨)도 체크 표시가 있어야 합니다." },
       { id: "sub-get", text: "Get Application으로 신청서 사본 받아 검토", tip: "누르면 약 15분 뒤 등록된 이메일로 신청서 전체가 옵니다. 오타·빈칸·이름 표기를 확인하세요." },
       { id: "sub-approve", text: "교장·이사장께 보고하고 내부 결재", tip: "전자 서명은 교장과 이사장이 신청서를 읽고 승인한 것으로 간주됩니다." },
-      { id: "sub-agree", text: "Agreement 입력: 교장 이름·직함, 이사장 이름·직함, 서명 체크", tip: "예: HONG Gil-dong, Principal / KIM Cheol-su, Chair of the Board of Trustees. Signature를 체크하면 아래 칸에 오늘 날짜가 자동으로 들어갑니다. 교육감(Superintendent) 칸은 해당 없으면 비워 둡니다." },
+      { id: "sub-agree", shot: "screens/07-agreement.jpg", shotCap: "이름·직함 입력, Signature 체크(날짜 자동), Submit Application.", text: "Agreement 입력: 교장 이름·직함, 이사장 이름·직함, 서명 체크", tip: "예: HONG Gil-dong, Principal / KIM Cheol-su, Chair of the Board of Trustees. Signature를 체크하면 아래 칸에 오늘 날짜가 자동으로 들어갑니다. 교육감(Superintendent) 칸은 해당 없으면 비워 둡니다." },
       { id: "sub-submit", text: "Submit Application", tip: "오류 창이 뜨면 '문제 해결' 탭에서 메시지를 찾아보세요." }
     ]
   },
@@ -80,7 +80,7 @@ window.STAGES = [
     title: "6. 제출 이후",
     when: "제출 후 수개월",
     items: [
-      { id: "af-review", text: "IB 검토와 후보학교 승인 메일 확인", tip: "추가 자료 요청이 올 수 있으니 코디네이터 메일함을 자주 확인하세요." },
+      { id: "af-review", shot: "screens/01-dashboard-stage.jpg", shotCap: "대시보드 Diploma Programme 상자에서 진행 단계를 확인합니다.", text: "IB 검토와 후보학교 승인 메일 확인", tip: "추가 자료 요청이 올 수 있으니 코디네이터 메일함을 자주 확인하세요." },
       { id: "af-consult", text: "컨설턴트 배정과 컨설테이션비 납부", tip: "후보학교 승인 뒤 청구됩니다. 교육청 지원금 집행 시기와 맞춰 두세요." },
       { id: "af-pd", text: "교사 Cat 1 워크숍 일정 확정", tip: "인증 신청(AFA)과 확인 방문 전까지 DP 담당 교사 전원이 이수해야 합니다." },
       { id: "af-staff", text: "교사들의 My IB 가입과 학교 연결 안내", tip: "일반 교사는 학교가 직접 추가할 수 없고, 각자 My IB에 가입해 학교와 역할을 등록해야 교사 수가 반영됩니다." }
@@ -175,6 +175,10 @@ window.DOCS = [
 window.SCREENS = [
   { img: "screens/01-dashboard-stage.jpg", title: "My School 대시보드: 신청 단계 확인",
     notes: ["Dashboard 아래쪽 Diploma Programme 상자에서 현재 단계(Stage)와 세부 단계(Sub-Stage)를 봅니다.", "'Request for Candidacy / Work in progress (School)'는 학교가 아직 작성 중이고 제출 전이라는 뜻입니다.", "'View Candidacy Application'을 누르면 신청서로 들어갑니다."] },
+  { img: "screens/08-school-staff.jpg", title: "School Profile → School staff: 관리 역할 등록",
+    notes: ["위쪽 메뉴 School Profile → 왼쪽 School staff로 들어갑니다.", "교장(Head of School), 코디네이터(Programme Coordinator), 결제 담당(Billing Contact)이 Confirmed 목록에 있어야 합니다.", "'Add new contact'는 이런 관리 역할만 추가합니다. 일반 교사는 각자 My IB에 가입해 학교와 역할을 등록합니다.", "이름 표기는 Edit에서 Last name(성)과 First name(이름)을 나눠 고칩니다."] },
+  { img: "screens/09-head-overall.jpg", title: "School staff 아래쪽: Head of School (Overall)",
+    notes: ["빨간 별표 필수 칸입니다. 교장을 골라 Save를 누르세요.", "비어 있으면 제출할 때 Profile Review 미완료 오류가 납니다."] },
   { img: "screens/02-left-menu.jpg", title: "신청서 왼쪽 메뉴: 색으로 진행 상황 읽기", narrow: true,
     notes: ["초록색 + 체크 = 완료", "노란색 = 필수 칸이 비어 있거나 저장되지 않음 (예: B2)", "체크 없는 파란 글씨 = 아직 Save and Continue를 누르지 않은 섹션 (예: Profile Review)", "모든 항목이 초록색이 되어야 제출할 수 있습니다."] },
   { img: "screens/03-profile-save.jpg", title: "Profile Review: 맨 아래 Save and Continue",

@@ -33,7 +33,8 @@
         <ul>${s.items.map((it) => `
           <li class="${done[it.id] ? "done" : ""}">
             <input type="checkbox" id="c-${it.id}" data-id="${it.id}" ${done[it.id] ? "checked" : ""}>
-            <div><label for="c-${it.id}">${esc(it.text)}</label><p class="tip">${esc(it.tip)}</p></div>
+            <div class="li-body"><label for="c-${it.id}">${esc(it.text)}</label><p class="tip">${esc(it.tip)}</p>
+              ${it.shot ? `<details class="mini"><summary>실제 화면 보기</summary><figure><img src="${esc(it.shot)}" alt="${esc(it.text)} 화면" loading="lazy"><figcaption>${esc(it.shotCap || "")}</figcaption></figure></details>` : ""}</div>
           </li>`).join("")}</ul>
       </div>`).join("") +
       `<div class="toolbar"><button class="btn ghost" id="reset">체크 모두 지우기</button></div>`;

@@ -108,3 +108,11 @@ main{padding-top:24px;padding-bottom:24px}
 .maker p{margin:2px 0}
 .maker-title{font-size:12px;font-weight:700;color:var(--orange)}
 .maker a{color:var(--teal);font-weight:700}
+.li-body{flex:1;min-width:0}
+.mini{margin-top:6px}
+.mini summary{cursor:pointer;color:var(--teal);font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:4px}
+.mini figure{margin:8px 0 0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px}
+.mini img{display:block;max-width:100%;height:auto;border-radius:6px;cursor:zoom-in}
+.mini figcaption{font-size:13px;color:#4A5568;margin-top:6px}
+.mini img[src*="left-menu"]{max-width:200px}
+.mini figure{max-width:680px}
