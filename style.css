@@ -104,3 +104,7 @@ main{padding-top:24px;padding-bottom:24px}
 .shot li{margin-bottom:6px}
 .shot-n{margin:0 0 4px;width:28px;height:28px;border-radius:50%;background:var(--teal);color:#fff;font-weight:900;display:grid;place-items:center;font-size:14px}
 @media (max-width:720px){.shot,.shot.narrow{grid-template-columns:1fr}.shot-img{border-right:0;border-bottom:1px solid var(--line)}}
+.maker{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin-bottom:16px;color:var(--ink)}
+.maker p{margin:2px 0}
+.maker-title{font-size:12px;font-weight:700;color:var(--orange)}
+.maker a{color:var(--teal);font-weight:700}
