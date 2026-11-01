@@ -225,5 +225,17 @@ Write the answer in clear, ${aiState.tone === "formal" ? "formal" : "plain, hone
     aiState.loading = false; renderAI();
   }
 
-  renderSteps(); renderGuide(); renderTrouble(); renderAI();
+  // ---------- real screens ----------
+  function renderScreens() {
+    const el = $("#tab-screens");
+    el.innerHTML = `<h2>실제 화면 보기</h2>
+      <p class="lead">IB My School의 실제 화면에서 어디를 보고 무엇을 눌러야 하는지 정리했습니다. 학교 정보는 흐리게 처리했고, IB가 화면 구성을 바꿀 수 있습니다.</p>` +
+      SCREENS.map((s, i) => `<figure class="shot ${s.narrow ? "narrow" : ""}">
+        <div class="shot-img"><img src="${esc(s.img)}" alt="${esc(s.title)}" loading="lazy"></div>
+        <figcaption><p class="shot-n">${i + 1}</p><h3>${esc(s.title)}</h3><ul>${s.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul></figcaption>
+      </figure>`).join("") +
+      `<p class="msg">화면 이미지 © International Baccalaureate Organization. 사용 안내 목적으로 일부만 실었습니다.</p>`;
+  }
+
+  renderSteps(); renderScreens(); renderGuide(); renderTrouble(); renderAI();
 })();
