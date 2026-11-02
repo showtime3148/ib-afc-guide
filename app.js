@@ -1,7 +1,13 @@
 (function () {
   const KEY = "afc-guide-progress-v1";
   const $ = (s, el = document) => el.querySelector(s);
-  const esc = (s) => String(s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  // 학교 유형: "pri"(사립) / "pub"(공립) / ""(둘 다 표시). 본문의 [[사립|공립]] 표기를 바꿔 보여 줍니다.
+  const TKEY = "afc-guide-school-type";
+  let stype = "";
+  try { stype = localStorage.getItem(TKEY) || ""; } catch (e) {}
+  const pick = (s) => String(s || "").replace(/\[\[([^|\]]*)\|([^\]]*)\]\]/g, (m, a, b) =>
+    stype === "pri" ? a : stype === "pub" ? b : `${a}(사립)·${b}(공립)`);
+  const esc = (s) => pick(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
   let done = {};
   try { done = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { done = {}; }
@@ -238,5 +244,15 @@ Write the answer in clear, ${aiState.tone === "formal" ? "formal" : "plain, hone
       `<p class="msg">화면 이미지 © International Baccalaureate Organization. 사용 안내 목적으로 일부만 실었습니다.</p>`;
   }
 
-  renderSteps(); renderScreens(); renderGuide(); renderTrouble(); renderAI();
+  // ---------- 학교 유형 선택 ----------
+  function drawType() {
+    document.querySelectorAll(".stype button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.t === stype));
+  }
+  document.querySelectorAll(".stype button").forEach((b) => b.addEventListener("click", () => {
+    stype = stype === b.dataset.t ? "" : b.dataset.t;
+    try { stype ? localStorage.setItem(TKEY, stype) : localStorage.removeItem(TKEY); } catch (e) {}
+    drawType(); renderAll();
+  }));
+  function renderAll() { renderSteps(); renderScreens(); renderGuide(); renderTrouble(); renderAI(); }
+  drawType(); renderAll();
 })();

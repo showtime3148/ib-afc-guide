@@ -9,7 +9,7 @@ window.STAGES = [
     items: [
       { id: "prep-feas", text: "타당성 조사(Feasibility study) 마무리", tip: "AFC의 학교 소개, 철학, 이해관계자 문항 답변 대부분을 타당성 조사서에서 그대로 가져다 씁니다. 먼저 끝내 두면 AFC 작성 시간이 절반으로 줄어듭니다." },
       { id: "prep-hos", text: "교장 Cat 1 관리자 워크숍 이수증 확보", tip: "Head of School 또는 Leading the learning 등 Cat 1 관리자 워크숍 수료증이 Documents 5번 필수 서류입니다. 제출 전에 반드시 있어야 합니다. 교장이 지정한 다른 사람(교감 등)의 수료증은 인정되지 않습니다. 교장직무대리처럼 교장 직무를 맡은 경우만 예외입니다." },
-      { id: "prep-board", text: "관리기구 보고·승인 (사립: 법인 이사회 / 공립: 학교운영위원회)", tip: "Agreement에 관리기구 대표(이사장 또는 운영위원장) 이름으로 전자 서명하게 됩니다. 보고와 예산 승인 기록을 미리 남겨 두세요." },
+      { id: "prep-board", text: "[[법인 이사회|학교운영위원회]] 보고·승인", tip: "Agreement에 [[이사장|운영위원장]] 이름으로 전자 서명하게 됩니다. 보고와 예산 승인 기록을 미리 남겨 두세요." },
       { id: "prep-office", text: "교육청 지원 공문(재정 지원 확인서) 받기", tip: "Documents 2번 'Support from authorities' 서류입니다. 교육청 IB 담당 장학사에게 요청하세요." },
       { id: "prep-myib", text: "My IB 계정 만들기와 My School 접속 확인", tip: "코디네이터 개인 계정(My IB)으로 로그인해 학교 페이지(My School)에 들어갈 수 있어야 합니다." }
     ]
@@ -42,10 +42,10 @@ window.STAGES = [
     when: "2~4주",
     items: [
       { id: "afc-school", shot: "screens/02-left-menu.jpg", shotCap: "신청서 왼쪽 메뉴. 초록색 체크 = 완료, 노란색 = 미완료.", text: "School and Community Description", tip: "학교 역사, 지역, 학생 구성, DP가 학교에 줄 기여. 타당성 조사서 1·6번을 다듬어 쓰면 됩니다." },
-      { id: "afc-prog", text: "Programme Information", tip: "법인명, 성별 구성, 기숙사, 학급 규모, IB 학생 추가 수업료 여부. 교육청 지원 공문 내용과 맞추세요." },
+      { id: "afc-prog", text: "Programme Information", tip: "[[법인명|설립 주체]], 성별 구성, 기숙사, 학급 규모, IB 학생 추가 수업료 여부. 교육청 지원 공문 내용과 맞추세요." },
       { id: "afc-subj", text: "Subject proposal (개설 과목)", tip: "한국어로 운영 가능한 과목인지 먼저 확인하세요. 예: 그룹 3(개인과 사회)은 한국어 공식 가이드가 역사뿐입니다." },
       { id: "afc-a", text: "Standard A: Philosophy", tip: "사명 선언문, 철학 일치 정도, 이해관계자 표, 전원 참여 여부. '부분적으로 일치(Partially)'라고 솔직하게 답하고 개선 과정을 쓰는 편이 자연스럽습니다." },
-      { id: "afc-b1", text: "Standard B1: Leadership and structure", tip: "관리기구(사립: 법인 이사회 / 공립: 학교운영위원회) 설명, 리더십 팀, 채용 책임, 코디네이터 업무 비율, 언어 정책." },
+      { id: "afc-b1", text: "Standard B1: Leadership and structure", tip: "관리기구([[법인 이사회|학교운영위원회]]) 설명, 리더십 팀, 채용 책임, 코디네이터 업무 비율, 언어 정책." },
       { id: "afc-b2", shot: "screens/04-b2-3a.jpg", shotCap: "3번 → 3a를 펼치면 빨간 필수 칸이 나옵니다.", text: "Standard B2: Resources and support", tip: "교사 수는 School Staff에 등록된 인원으로 자동 계산됩니다. 3번을 펼치면 나오는 3a 안의 필수 입력 칸 '인증 후 새로 채용한 교원의 적응·연수 계획'을 꼭 작성하고 Save and Continue를 누르세요." },
       { id: "afc-budget", shot: "screens/05-budget.jpg", shotCap: "시작 연도 Save → Add to Budget으로 항목 추가 → Save and Continue.", text: "Implementation Budget (5개년 예산, SGD)", tip: "후보 신청비, 컨설테이션비, 워크숍비, 인증 신청비, 연회비를 연도별로 넣습니다. B2.3a의 연수 계획과 금액이 맞아야 합니다." }
     ]
@@ -70,8 +70,8 @@ window.STAGES = [
     items: [
       { id: "sub-left", shot: "screens/02-left-menu.jpg", shotCap: "제출 전 모든 메뉴가 초록색인지 확인합니다.", text: "왼쪽 메뉴가 모두 초록색인지 확인", tip: "노란색은 미완료입니다. Profile Review(파란 글씨)도 체크 표시가 있어야 합니다." },
       { id: "sub-get", text: "Get Application으로 신청서 사본 받아 검토", tip: "누르면 약 15분 뒤 등록된 이메일로 신청서 전체가 옵니다. 오타·빈칸·이름 표기를 확인하세요." },
-      { id: "sub-approve", text: "교장·관리기구 대표(이사장 또는 운영위원장)께 보고하고 내부 결재", tip: "전자 서명은 교장과 관리기구 대표가 신청서를 읽고 승인한 것으로 간주됩니다." },
-      { id: "sub-agree", shot: "screens/07-agreement.jpg", shotCap: "이름·직함 입력, Signature 체크(날짜 자동), Submit Application.", text: "Agreement 입력: 교장 이름·직함, 관리기구 대표(사립: 이사장 / 공립: 운영위원장) 이름·직함, 서명 체크", tip: "예: HONG Gil-dong, Principal / KIM Cheol-su, Chair of the Board of Trustees(사립) 또는 Chair of the School Steering Committee(공립). Signature를 체크하면 아래 칸에 오늘 날짜가 자동으로 들어갑니다. 교육감(Superintendent) 칸은 해당 없으면 비워 둡니다." },
+      { id: "sub-approve", text: "교장·[[이사장|운영위원장]]께 보고하고 내부 결재", tip: "전자 서명은 교장과 [[이사장|운영위원장]]이 신청서를 읽고 승인한 것으로 간주됩니다." },
+      { id: "sub-agree", shot: "screens/07-agreement.jpg", shotCap: "이름·직함 입력, Signature 체크(날짜 자동), Submit Application.", text: "Agreement 입력: 교장 이름·직함, [[이사장|운영위원장]] 이름·직함, 서명 체크", tip: "예: HONG Gil-dong, Principal / KIM Cheol-su, [[Chair of the Board of Trustees|Chair of the School Steering Committee]]. Signature를 체크하면 아래 칸에 오늘 날짜가 자동으로 들어갑니다. 교육감(Superintendent) 칸은 해당 없으면 비워 둡니다." },
       { id: "sub-submit", text: "Submit Application", tip: "오류 창이 뜨면 '문제 해결' 탭에서 메시지를 찾아보세요." }
     ]
   },
@@ -132,10 +132,10 @@ window.TROUBLES = [
     steps: ["교육청에서 받은 후보학교 관련 공문 회신을 스캔해 PDF로 만듭니다", "Documents 1번(Legal status)과 2번(Support from authorities)에 같은 파일을 올립니다", "공증 번역본은 따로 만들지 않아도 됩니다"]
   },
   {
-    q: "Agreement의 관리기구 대표(Chair of the governing body)와 교육감(Superintendent) 칸은 어떻게 쓰나요?",
+    q: "Agreement의 [[이사장|운영위원장]](Chair of the governing body)과 교육감(Superintendent) 칸은 어떻게 쓰나요?",
     tags: ["Agreement", "서명"],
-    a: "관리기구 대표는 사립이면 학교법인 이사장, 공립이면 학교운영위원장입니다. 교육감 칸은 해당 없으면 비워 둡니다.",
-    steps: ["교장: 'HONG Gil-dong, Principal' 형식으로 입력하고 Signature 체크 (아래 칸에 날짜가 자동 입력됨)", "관리기구 대표: 사립은 'KIM Cheol-su, Chair of the Board of Trustees', 공립은 'KIM Cheol-su, Chair of the School Steering Committee' 형식 + Signature 체크", "영문 이름은 여권 표기와 맞춥니다", "전자 서명은 승인으로 간주되니 사전 보고·결재를 받아 두세요"]
+    a: "관리기구 대표(Chair of the governing body)는 [[학교법인 이사장|학교운영위원장]]입니다. 교육감 칸은 해당 없으면 비워 둡니다.",
+    steps: ["교장: 'HONG Gil-dong, Principal' 형식으로 입력하고 Signature 체크 (아래 칸에 날짜가 자동 입력됨)", "[[이사장|운영위원장]]: 'KIM Cheol-su, [[Chair of the Board of Trustees|Chair of the School Steering Committee]]' 형식 + Signature 체크", "영문 이름은 여권 표기와 맞춥니다", "전자 서명은 승인으로 간주되니 사전 보고·결재를 받아 두세요"]
   },
   {
     q: "Get Application을 눌렀는데 아무 일도 없어요",
@@ -190,5 +190,5 @@ window.SCREENS = [
   { img: "screens/06-documents.jpg", title: "Documents: 필수 서류 5종 업로드",
     notes: ["항목별 Upload 버튼으로 올리면 위 표에 문서 종류(Document type)와 함께 쌓입니다.", "1번(법적 지위)과 2번(당국 지원)에는 교육청의 후보학교 관련 공문 회신 스캔본을 똑같이 올리면 됩니다.", "다 올린 뒤 맨 아래 Save and Continue."] },
   { img: "screens/07-agreement.jpg", title: "Agreement: 서명과 제출",
-    notes: ["교장 이름·직함, 관리기구 대표(사립: 이사장 / 공립: 운영위원장) 이름·직함을 입력합니다. 교육감 칸은 해당 없으면 비워 둡니다.", "Signature를 체크하면 아래 칸에 날짜가 자동으로 들어갑니다.", "같은 페이지 위쪽 Get Application으로 신청서 사본을 이메일로 받아 검토한 뒤 Submit Application을 누릅니다."] }
+    notes: ["교장 이름·직함, [[이사장|운영위원장]] 이름·직함을 입력합니다. 교육감 칸은 해당 없으면 비워 둡니다.", "Signature를 체크하면 아래 칸에 날짜가 자동으로 들어갑니다.", "같은 페이지 위쪽 Get Application으로 신청서 사본을 이메일로 받아 검토한 뒤 Submit Application을 누릅니다."] }
 ];
